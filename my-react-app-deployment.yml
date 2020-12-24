@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-react-app
+spec:
+  replicas: 3
+  minReadySeconds: 5
+  selector:
+    matchLabels:
+      app: my-react-app
+  template:
+    metadata:
+      name: my-react-app-pod
+      labels:
+        app: my-react-app
+    spec:
+      containers:
+      - name: my_react_app
+        image: my_react_app:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
+        
