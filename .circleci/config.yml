@@ -43,6 +43,6 @@ jobs:
       - run: gradle build
       - setup_remote_docker:
           version: 19.03.13
-      - run: docker build --tag kangzu8743/apitest:v5 .
+      - run: docker build --tag kangzu8743/apitest:v$CIRCLE_BUILD_NUM .
       - run: docker login -u kangzu8743 -p rkdtjrwn0!
-      - run: docker push kangzu8743/apitest:v5
+      - run: docker push kangzu8743/apitest:v$CIRCLE_BUILD_NUM
