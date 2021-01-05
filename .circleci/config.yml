@@ -45,5 +45,5 @@ jobs:
           version: 19.03.13
       - run: docker build --tag kangzu8743/apitest:v5 .
       - run: |
-          echo docker login -u kangzu8743 --password-stdin
+          echo $DOCKER_PWD | docker login -u $DOCKER_LOGIN --password-stdin
           docker push kangzu8743/apitest:v5
