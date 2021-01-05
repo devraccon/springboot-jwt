@@ -50,6 +50,6 @@ jobs:
       - run: docker push kangzu8743/apitest:v$CIRCLE_BUILD_NUM
       - run:
           name: Avoid hosts unknown for github
-          command: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
+          command: echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
       - run: ssh rkdtjrwn0722@34.64.80.159 "./test.sh"
 
