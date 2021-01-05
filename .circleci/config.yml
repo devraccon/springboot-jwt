@@ -42,6 +42,5 @@ jobs:
       - run: gradle test
       - run: gradle build
       - setup_remote_docker:
-        version: 19.03.13
-        docker_layer_caching: true
+          docker_layer_caching: true
       - run: docker build --tag springboot-jwt:v5 .
