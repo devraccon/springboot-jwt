@@ -37,9 +37,6 @@ jobs:
           paths:
             - ~/.gradle
           key: v1-dependencies-{{ checksum "build.gradle" }}
-      - add_ssh_keys:
-          fingerprints:
-            - "72:5f:2d:03:db:a5:68:06:b6:a6:bc:87:76:59:68:25"
       # run tests!
       - run: gradle test
       - run: gradle build
