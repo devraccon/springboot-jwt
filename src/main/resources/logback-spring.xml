@@ -16,7 +16,6 @@
 	    </root>
     </springProfile>
     <springProfile name="dev">	
-E      
 	    <appender name="STASH" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
 	        <destination>34.64.118.110:5000</destination>
 	       	<encoder class="net.logstash.logback.encoder.LogstashEncoder" />
