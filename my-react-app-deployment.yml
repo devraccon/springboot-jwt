@@ -15,9 +15,9 @@ spec:
         app: my-react-app
     spec:
       containers:
-      - name: my_react_app
-        image: my_react_app:latest
-        imagePullPolicy: IfNotPresent
+      - name: my-react-app
+        image: kangzu8743/apitest:v49
+        imagePullPolicy: Always
+        command: ['sh', '-c', 'echo xxx && sleep 6000']
         ports:
         - containerPort: 8080
-        
