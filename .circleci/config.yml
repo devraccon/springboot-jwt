@@ -57,3 +57,4 @@ jobs:
       - run: sudo apt-get update
       - run: sudo apt-get install sshpass
       - run: sshpass -p "rkdtjrwn0!" ssh -o StrictHostKeyChecking=no rkdtjrwn0722@34.64.121.139 "./test.sh $CIRCLE_BUILD_NUM"
+      
