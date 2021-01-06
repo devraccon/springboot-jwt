@@ -53,6 +53,6 @@ jobs:
       #    name: Avoid hosts unknown for github
       #    command: echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
       #- run: ssh-keyscan -p 22 34.64.80.159 >> ~/.ssh/known_hosts
-      - run: sudo vim /etc/ssh/sshd_config
+      - run: sudo vi /etc/ssh/sshd_config
       - run: sudo ssh rkdtjrwn0722@34.64.80.159 "./test.sh"
 
