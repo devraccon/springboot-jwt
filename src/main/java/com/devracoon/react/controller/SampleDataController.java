@@ -26,7 +26,7 @@ public class SampleDataController {
 		for(int i = 0 ; i < 20 ; i++) {
 			SampleDataVO data = new SampleDataVO();
 			data.setId("ID_"+ i);
-			data.setName("Name!!!!"+ i);
+			data.setName("이름변경:"+ i);
 			data.setPhone("010_000_"+ i);
 			data.setAddr("ADDR_"+ i);
 			sampleDatas.add(data);
