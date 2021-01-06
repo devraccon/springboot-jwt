@@ -17,4 +17,4 @@ ARG JAR_FILE
 COPY ${JAR_FILE} my_react_app.jar
 
 # Run the jar file
-ENTRYPOINT ["java","-jar","/my_react_app.jar"]
+ENTRYPOINT ["java","-jar","-Dspring.profiles.active=local","/my_react_app.jar"]
