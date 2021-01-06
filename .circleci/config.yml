@@ -44,7 +44,7 @@ jobs:
       - run: gradle build
       - setup_remote_docker:
           version: 19.03.13
-      - run: docker build --tag kangzu8743/apitest:v$CIRCLE_BUILD_NUM .
+      - run: docker build --build-arg JAR_FILE=my_react_app-0.0.1-SNAPSHOT.jar --tag kangzu8743/apitest:v$CIRCLE_BUILD_NUM .
       - run: docker login -u kangzu8743 -p rkdtjrwn0!
       - run: docker push kangzu8743/apitest:v$CIRCLE_BUILD_NUM
       #- run:
